@@ -83,3 +83,46 @@ body {
     font-size: 18px;
     transition: opacity 0.3s;
 }
+@keyframes bounceAndSpin {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-50px) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+#welcomePage h1 {
+    color: #ff8c00;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#welcomePage p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#welcomePage button {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#welcomePage button:hover {
+    background-color: #45a049;
+}
+#welcomeStar {
+    width: 50px;
+    height: 50px;
+    animation: bounceAndSpin 2s infinite;
+    display: block;
+    margin: 20px auto;
+}

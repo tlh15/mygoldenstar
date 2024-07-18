@@ -101,3 +101,17 @@ function loadKids() {
         kidList.appendChild(li);
     });
 }
+document.addEventListener("DOMContentLoaded", function() {
+    goToPage('welcomePage');
+    animateWelcomeStar();
+});
+
+function animateWelcomeStar() {
+    const star = document.getElementById('welcomeStar');
+    // Change star from grey to golden halfway through the animation
+    setTimeout(() => {
+        star.src = 'star_yellow.png';
+    }, 1000); // Adjust timing to match when the star is mid-air
+}
+
+
