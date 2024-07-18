@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incentive App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Kid List Page -->
+    <div id="kidListPage" class="page">
+        <ul id="kidList"></ul>
+        <button onclick="addKid()">Add Kid</button>
+    </div>
+
+    <!-- Name Input Page -->
+    <div id="namePage" class="page" style="display: none;">
+        <input type="text" id="nameInput" class="name-input" placeholder="Enter kid's name">
+        <button onclick="setupStarsPage()">Next</button>
+    </div>
+
+    <!-- Stars and Reward Input Page -->
+    <div id="starsPage" class="page" style="display: none;">
+        <input type="number" id="numStars" class="input" placeholder="Number of stars">
+        <input type="text" id="reward" class="input" placeholder="Reward">
+        <button onclick="setupMainPage()">Setup Star Chart</button>
+    </div>
+
+    <!-- Main Page -->
+    <div id="mainPage" class="page" style="display: none;">
+        <div class="back-button-container">
+            <button onclick="goToPage('kidListPage')">Back</button>
+        </div>
+        <div class="name-display" id="displayName"></div>
+        <div class="grid-container" id="mainStars"></div>
+        <div id="rewardMessage" class="reward-message" style="display: none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f7f6; /* Soft green background */
+    margin: 0;
+    font-family: 'Comic Neue', cursive; /* Fun font for kids */
+}
+
+.page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border: 2px solid #c1e1c5; /* Light green border */
+    border-radius: 12px;
+    padding: 40px 16px 16px; /* Increased top padding */
+    width: 90%; /* Adjust size as needed */
+    max-width: 600px; /* Maximum width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+
+.back-button-container {
+    position: absolute;
+    top: 10px; /* Position adjusted for better visibility */
+    right: 10px;
+}
+
+.button, button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff8c00; /* Vibrant orange */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover, button:hover {
+    background-color: #ffa500; /* Lighter orange on hover */
+    transform: scale(1.05); /* Slight increase in size on hover */
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.star {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.star:hover {
+    transform: scale(1.2); /* Enlarge stars on hover */
+}
+
+.input, .name-input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ff8c00; /* Orange border for inputs */
+    border-radius: 12px;
+    margin: 8px;
+    box-sizing: border-box;
+}
+
+.reward-message {
+    margin-top: 16px;
+    padding: 8px;
+    background-color: #ff8c00;
+    color: white;
+    border-radius: 12px;
+    font-size: 18px;
+    transition: opacity 0.3s;
+}
