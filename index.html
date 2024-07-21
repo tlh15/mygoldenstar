@@ -10,17 +10,15 @@
 <body>
     <!-- Welcome Page -->
     <div id="welcomePage" class="page">
-    <h1>Welcome to the Star Incentive App!</h1>
-    <p>This app helps you track and reward achievements with fun stars.</p>
-    <img src="star_grey.png" alt="Grey Star" id="welcomeStar">
-    <button onclick="goToPage('kidListPage')">Enter</button>
+        <h1>Willkommen zu MyGoldenStar, die App der goldenen Sterne, und deiner Wünsche</h1>
+        <img src="star_grey.png" alt="Grey Star" id="welcomeStar">
+        <button onclick="goToPage('kidListPage')">Enter</button>
     </div>
 
-
     <!-- Kid List Page -->
-    <div id="kidListPage" class="page">
+    <div id="kidListPage" class="page" style="display: none;">
         <ul id="kidList"></ul>
-        <button onclick="addKid()">Add Kid</button>
+        <button onclick="addKid()">Füge ein weiteres Kind hinzu</button>
     </div>
 
     <!-- Name Input Page -->
@@ -33,7 +31,8 @@
     <div id="starsPage" class="page" style="display: none;">
         <input type="number" id="numStars" class="input" placeholder="Number of stars">
         <input type="text" id="reward" class="input" placeholder="Reward">
-        <button onclick="setupMainPage()">Setup Star Chart</button>
+        <input type="url" id="affiliateLink" class="input" placeholder="Enter your link here">
+        <button onclick="setupMainPage()">Starte deine Reise</button>
     </div>
 
     <!-- Main Page -->
@@ -46,6 +45,26 @@
         <div id="rewardMessage" class="reward-message" style="display: none;"></div>
     </div>
 
+    <!-- Rewards List Page -->
+    <div id="rewardsPage" class="page" style="display: none;">
+        <h2>Rewards List</h2>
+        <div id="addRewardForm">
+            <input type="text" id="descriptionInput" placeholder="Enter reward description" class="input">
+            <input type="url" id="linkInput" placeholder="Enter Amazon link" class="input">
+            <button onclick="addReward()">Add Reward</button>
+        </div>
+        <div id="rewardsContainer" class="rewards-container"></div>
+        <button onclick="goToPage('kidListPage')">Back to Kids List</button>
+    </div>
+
+    <!-- Bottom Navigation Menu -->
+    <div class="bottom-nav">
+        <button onclick="goToPage('kidListPage')">Kids List</button>
+        <button onclick="goToPage('rewardsPage')">Rewards</button>
+        <button onclick="goToPage('mainPage')">Main Page</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
+
